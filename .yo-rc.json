@@ -41,6 +41,9 @@
     "jwtSecretKey": "NTc3MjQ0Mzc2NTNlOWM1ZWY3Y2JmYzNmNWFmODMwNmRiNTg0MzBmY2I3ZDI2MmJjYjRlOGRiOTllNmNhNGE1ODVlMWNlMWI2MTc4YzhkZGJlZTRjODFiMmQ2NTI3MTY2YjJmYWFjMDJhYzhkNGZjNWEwNGU5ZTE1NDc3YjZkNTg=",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["en", "in"]
+    "languages": ["en", "in"],
+    "incrementalChangelog": true,
+    "entities": ["Transaction", "Book"],
+    "lastLiquibaseTimestamp": 1710144667000
   }
 }
