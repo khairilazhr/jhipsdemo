@@ -92,17 +92,21 @@
               />
             </b-input-group>
           </div>
+
           <div class="form-group">
             <label class="form-control-label" v-text="$t('jhipsdemoApp.transaction.gender')" for="transaction-gender">Gender</label>
-            <input
-              type="text"
+            <select
               class="form-control"
               name="gender"
               id="transaction-gender"
               data-cy="gender"
               :class="{ valid: !$v.transaction.gender.$invalid, invalid: $v.transaction.gender.$invalid }"
               v-model="$v.transaction.gender.$model"
-            />
+            >
+              <option value="" disabled>Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
           </div>
         </div>
         <div>

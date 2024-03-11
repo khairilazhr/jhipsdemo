@@ -22,9 +22,9 @@
     </h2>
     <br />
 
-    <div class="row justify-content-start">
-      <div class="col-6">
-        <input type="text" v-model="freeText" v-on:input="search(freeText)" class="form-control" placeholder="Search" />
+    <div class="row justify-content-start align-items-center">
+      <div class="col-md-6">
+        <b-form-input type="text" v-model="freeText" @input="search(freeText)" placeholder="Search" class="w-100" />
       </div>
     </div>
 
