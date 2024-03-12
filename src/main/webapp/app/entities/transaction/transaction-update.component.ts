@@ -13,9 +13,15 @@ const validations: any = {
     title: {
       required,
     },
-    totalprice: {},
-    date: {},
-    gender: {},
+    totalprice: {
+      required,
+    },
+    date: {
+      required,
+    },
+    gender: {
+      required,
+    },
   },
 };
 
