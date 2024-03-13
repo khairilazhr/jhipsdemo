@@ -21,13 +21,6 @@
       </div>
     </h2>
     <br />
-
-    <div class="row justify-content-start align-items-center">
-      <div class="col-md-6">
-        <b-form-input type="text" v-model="freeText" @input="search(freeText)" placeholder="Search" class="w-100" />
-      </div>
-    </div>
-
     <div class="alert alert-warning" v-if="!isFetching && transactions && transactions.length === 0">
       <span v-text="$t('jhipsdemoApp.transaction.home.notFound')">No transactions found</span>
     </div>

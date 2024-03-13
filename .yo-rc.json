@@ -43,7 +43,7 @@
     "clientThemeVariant": "",
     "languages": ["en", "in"],
     "incrementalChangelog": true,
-    "entities": ["Transaction", "Book"],
-    "lastLiquibaseTimestamp": 1710144667000
+    "entities": ["Transaction", "Book", "THrpRole"],
+    "lastLiquibaseTimestamp": 1710292652000
   }
 }

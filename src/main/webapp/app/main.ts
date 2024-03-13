@@ -29,6 +29,7 @@ import UserOAuth2Service from '@/entities/user/user.oauth2.service';
 
 import TransactionService from '@/entities/transaction/transaction.service';
 import BookService from '@/entities/book/book.service';
+import THrpRoleService from '@/entities/t-hrp-role/t-hrp-role.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -89,6 +90,7 @@ new Vue({
     translationService: () => translationService,
     transactionService: () => new TransactionService(),
     bookService: () => new BookService(),
+    tHrpRoleService: () => new THrpRoleService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },

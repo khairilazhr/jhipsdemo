@@ -62,13 +62,7 @@
               data-cy="totalprice"
               :class="{ valid: !$v.transaction.totalprice.$invalid, invalid: $v.transaction.totalprice.$invalid }"
               v-model.number="$v.transaction.totalprice.$model"
-              required
             />
-            <div v-if="$v.transaction.totalprice.$anyDirty && $v.transaction.totalprice.$invalid">
-              <small class="form-text text-danger" v-if="!$v.transaction.totalprice.required" v-text="$t('entity.validation.required')">
-                This field is required.
-              </small>
-            </div>
           </div>
           <div class="form-group">
             <label class="form-control-label" v-text="$t('jhipsdemoApp.transaction.date')" for="transaction-date">Date</label>
@@ -95,36 +89,20 @@
                 name="date"
                 :class="{ valid: !$v.transaction.date.$invalid, invalid: $v.transaction.date.$invalid }"
                 v-model="$v.transaction.date.$model"
-                required
               />
-              <div v-if="$v.transaction.date.$anyDirty && $v.transaction.date.$invalid">
-                <small class="form-text text-danger" v-if="!$v.transaction.date.required" v-text="$t('entity.validation.required')">
-                  This field is required.
-                </small>
-              </div>
             </b-input-group>
           </div>
-
           <div class="form-group">
             <label class="form-control-label" v-text="$t('jhipsdemoApp.transaction.gender')" for="transaction-gender">Gender</label>
-            <select
+            <input
+              type="text"
               class="form-control"
               name="gender"
               id="transaction-gender"
               data-cy="gender"
               :class="{ valid: !$v.transaction.gender.$invalid, invalid: $v.transaction.gender.$invalid }"
               v-model="$v.transaction.gender.$model"
-              required
-            >
-              <option value="" disabled>Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-            <div v-if="$v.transaction.gender.$anyDirty && $v.transaction.gender.$invalid">
-              <small class="form-text text-danger" v-if="!$v.transaction.gender.required" v-text="$t('entity.validation.required')">
-                This field is required.
-              </small>
-            </div>
+            />
           </div>
         </div>
         <div>

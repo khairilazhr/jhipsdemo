@@ -19,8 +19,6 @@ export default class Transaction extends Vue {
   public propOrder = 'id';
   public reverse = false;
   public totalItems = 0;
-  public freeText = '';
-  public searchQuery = '';
 
   public transactions: ITransaction[] = [];
 
@@ -35,11 +33,6 @@ export default class Transaction extends Vue {
     this.retrieveAllTransactions();
   }
 
-  public search(freeText): void {
-    this.freeText = freeText;
-    this.retrieveAllTransactions();
-  }
-
   public retrieveAllTransactions(): void {
     this.isFetching = true;
 
@@ -48,13 +41,8 @@ export default class Transaction extends Vue {
       size: this.itemsPerPage,
       sort: this.sort(),
     };
-
-    if (this.freeText) {
-      this.searchQuery = 'name.contains=' + this.freeText;
-    }
-
     this.transactionService()
-      .retrieve(paginationQuery, this.searchQuery)
+      .retrieve(paginationQuery)
       .then(
         res => {
           this.transactions = res.data;
